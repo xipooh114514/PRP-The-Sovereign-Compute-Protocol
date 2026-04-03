@@ -1,0 +1,79 @@
+GeForce does not have an official, complete TEE.
+
+• Realistic Path: Our current workaround is not to wait for NVIDIA's leniency, but to utilize "CPU-Attached Attestation." This involves encapsulating the entire computing environment (including GPU calls) within a CPU enclave using Intel TDX or AMD SEV. While this still carries the risk of side-channel attacks on PCIe communication, for 90% of scientific simulations (non-state secrets), it provides far greater credibility than traditional cloud virtual machines.
+
+• PRP's Bet: We're betting on "sovereign premium." When pharmaceutical companies discover that AWS bills include a 30% administrative premium, while PRP Node-01 offers "physical cost + 5% verification fee," minor technical flaws will be offset by a huge economic advantage.
+
+• Definition of SU: \bm{SU} is not pegged to the US dollar; it is pegged to "computational difficulty × Joules". Within the PRP system, we don't compare prices with AWS; we compare them with the "rate of fiat currency devaluation." When the issuance of SU is entirely determined by physical work, it inherently possesses deflationary properties.
+
+Human ACR: Since automated attestation is still under development, the first report will be a "manually signed physical log." This is primitive, but like Satoshi Nakamoto's first block, it proves that **"physical work can be recorded."**
+
+# Node-01
+
+A minimal, private GPU compute node designed for researchers who cannot afford queue delays on institutional clusters.
+
+## Why this exists
+
+Modern academic compute clusters are powerful but constrained:
+
+- Long queue times (hours to weeks)
+- Restricted environments
+- Limited flexibility for experimental workloads
+- Low priority for small or iterative jobs
+
+Node-01 is a response to this gap.
+
+It is not a cloud platform.
+It is not a distributed system.
+
+It is simply:
+
+> A privately operated GPU machine that runs your job immediately.
+
+---
+
+## What Node-01 provides
+
+- Immediate GPU execution (no queue system)
+- Full environment control (Docker / CUDA / Python stacks)
+- Lightweight job execution via remote access (SSH / file transfer)
+- Optional isolation per job
+- Human-in-the-loop execution (manual but fast)
+
+---
+
+## Target users
+
+- Graduate students in computational biology
+- CFD / physics simulation researchers
+- ML researchers running small-scale experiments
+- Anyone blocked by institutional compute queues
+
+---
+
+## How it works
+
+1. User sends a job (script / dataset / environment spec)
+2. Operator configures environment if needed
+3. Job is executed on local GPU node
+4. Output is returned with logs and runtime summary
+
+---
+
+## Design philosophy
+
+Node-01 is not designed to scale.
+
+It is designed to:
+
+> Restore compute time autonomy to individual researchers.
+
+---
+
+## Status
+
+This is an early-stage experimental system (single-node).
+
+No guarantees. No SLA.
+
+Just compute time, when you need it.
