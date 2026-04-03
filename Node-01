@@ -77,3 +77,119 @@ This is an early-stage experimental system (single-node).
 No guarantees. No SLA.
 
 Just compute time, when you need it.
+
+# Concept
+
+Node-01 is built on a simple assumption:
+
+> The scarcest resource in scientific computing is not compute power, but queue time.
+
+Institutional clusters optimize for fairness and utilization efficiency.
+Cloud providers optimize for scalability and profit.
+
+Neither optimizes for:
+
+> Immediate experimental iteration for individual researchers.
+
+Node-01 explores a different axis:
+
+- Not distributed
+- Not decentralized
+- Not scalable
+
+But:
+
+> Personally accessible compute
+
+It treats computation as a physical resource that should be:
+
+- Immediate
+- Controllable
+- Experiment-friendly
+
+Rather than a centralized scheduling problem.
+
+# Concept
+
+Node-01 is built on a simple assumption:
+
+> The scarcest resource in scientific computing is not compute power, but queue time.
+
+Institutional clusters optimize for fairness and utilization efficiency.
+Cloud providers optimize for scalability and profit.
+
+Neither optimizes for:
+
+> Immediate experimental iteration for individual researchers.
+
+Node-01 explores a different axis:
+
+- Not distributed
+- Not decentralized
+- Not scalable
+
+But:
+
+> Personally accessible compute
+
+It treats computation as a physical resource that should be:
+
+- Immediate
+- Controllable
+- Experiment-friendly
+
+Rather than a centralized scheduling problem.
+
+# Operator Logs
+
+This file records real usage of Node-01.
+
+---
+
+## Job #001
+
+- Date: 2026-XX-XX
+- User: Graduate student (biology)
+- Task: Protein folding simulation (OpenMM)
+- Duration: 2.3 hours
+- Result: Successful run
+- Notes: Job was previously stuck in institutional queue for ~5 days
+
+---
+
+## Job #002
+
+- Date: 2026-XX-XX
+- User: CFD researcher
+- Task: Airflow simulation
+- Duration: 4.1 hours
+- Result: Successful
+- Notes: Required custom CUDA configuration, not allowed in cluster environment
+
+---
+
+## Remarks
+
+Each job represents a reduction in "queue time inequality".
+
+# Example Job
+
+## Task
+Run a small OpenMM simulation
+
+## Requirements
+- CUDA 12
+- Python 3.10
+- OpenMM 8.x
+
+## Input
+- input.pdb
+- config.yaml
+
+## Output
+- trajectory.dcd
+- energy.log
+
+## Execution
+Provided via Docker container or manual setup by operator.
+
